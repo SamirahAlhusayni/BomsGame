@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <style>
+        div{
+    height: 50px;
+    width: 50px;
+    color: white;
+     background-color: black;
+        }
+    </style>
+        <body>
+<table>
+    <tr>
+           <td>
+            <div id="1">1</div>
+           </td> 
+           <td>
+            <div id="2">2</div>
+           </td> 
+           <td>
+            <div id="3">3</div>
+           </td>
+    </tr>
+    <tr>
+        <td>
+         <div id="4">4</div>
+        </td> 
+        <td>
+         <div id="5">5</div>
+        </td> 
+        <td>
+         <div id="6">6</div>
+        </td>
+ </tr>
+ <tr>
+    <td>
+     <div id="7">7</div>
+    </td> 
+    <td>
+     <div id="8">8</div>
+    </td> 
+    <td>
+     <div id="9">9</div>
+    </td>
+</tr>
+<tr>
+    <td>
+     <div id="10">10</div>
+    </td> 
+    <td>
+     <div id="11">11</div>
+    </td> 
+    <td>
+     <div id="12">12</div>
+    </td>
+</tr>
+</table>
+<script>
+    let greenCount = 0;
+    let redCount = 0;
+    let divs = document.getElementsByTagName("div");
+    let rand = Math.floor(Math.random() * 11);  
+    let rand1 = Math.floor(Math.random() * 11);  
+    let rand2 = Math.floor(Math.random() * 11);  
+    for (let i = 0 ;i <=divs.length; i++)
+    {
+        divs[i].onclick = function(e){
+        if( divs[i].innerHTML== rand || divs[i].innerHTML== rand1 || divs[i].innerHTML== rand2 ){
+            divs[i].style.backgroundColor = "red"
+            redCount++;
+            if(redCount ==3){
+                alert("You loss")
+            }
+        }
+        else{  
+         divs[i].style.backgroundColor = "green"
+         greenCount++;
+         if(greenCount == 8){
+                alert("You won!")
+            }
+        }
+    }
+    }
+</script>
+        </body>
+    </head>
+</html>
